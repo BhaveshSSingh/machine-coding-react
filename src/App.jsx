@@ -1,3 +1,4 @@
+import { Link, Outlet } from "react-router-dom";
 import NestedComments from "./nestedComments/NestedComments";
 import NestedFolder from "./nestedFolders/NestedFolder";
 
@@ -5,7 +6,7 @@ function App() {
   return (
     <div className="p-5">
       <h1 className="text-3xl font-bold underline pb-3 flex justify-center items-center">
-        Maching Coding Question
+        Maching Coding Question{" "}
         <a
           href="https://github.com/BhaveshSSingh/machine-coding-react"
           className=" p-2 ml-5"
@@ -25,42 +26,54 @@ function App() {
           </svg>
         </a>
       </h1>
-
-      <div>
-        <p className="text-purple-700 text-xl">1.Nested Comments</p>
-        <NestedComments />
-        <p className="text-orange-700 text-xl">2.Folder Structure</p>
-        <NestedFolder />
-        <p className="text-orange-700 text-xl">3.Live Chat</p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">4. Search Type Ahead</p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">5.Day Calendar</p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">
+      <div className="flex flex-col">
+        <Link to="/comments" className="py-2">
+          1. Nested Comments
+        </Link>
+        <Link to="folder" className="py-2">
+          2. Nested Folder
+        </Link>
+        <Link to="folder" className="py-2">
+          3.Live Chat
+        </Link>
+        <Link to="folder" className="py-2">
+          4. Search Type Ahead
+        </Link>
+        <Link to="folder" className="py-2">
+          5.Day Calendar
+        </Link>
+        <Link to="folder" className="py-2">
+          {" "}
           6. Microsoft Excel like spreadsheet
-        </p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">
+        </Link>
+        <Link to="folder" className="py-2">
+          {" "}
           7.Render dynamic forms using config
-        </p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">8. Implement a progress bar</p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">9.Star rating widget</p>
-        {/* <NestedFolder />{" "} */}
-        <p className="text-orange-700 text-xl">10.Twitter Post like textarea</p>
-        {/* <NestedFolder /> */}{" "}
-        <p className="text-orange-700 text-xl">11.Todo List</p>
-        {/* <NestedFolder /> */}
-        <p className="text-orange-700 text-xl">12.Design cart page</p>
-        {/* <NestedFolder /> */}
-        <p className="text-orange-700 text-xl">
+        </Link>
+        <Link to="folder" className="py-2">
+          8. Implement a progress bar
+        </Link>
+        <Link to="folder" className="py-2">
+          9.Star rating widget
+        </Link>
+        <Link to="folder" className="py-2">
+          10.Twitter Post like textarea
+        </Link>
+        <Link to="folder" className="py-2">
+          11.Todo List
+        </Link>
+        <Link to="folder" className="py-2">
+          12.Design cart page
+        </Link>
+        <Link to="folder" className="py-2">
           13. Design product listing page with filters
-        </p>
-        {/* <NestedFolder /> */}
-        <p className="text-orange-700 text-xl">14.Build tic-tac-toe game</p>
-        {/* <NestedFolder /> */}
+        </Link>
+        <Link to="folder" className="py-2">
+          14.Build tic-tac-toe game
+        </Link>
+      </div>
+      <div className="w-full h-full border-4  border-sky-400">
+        <Outlet />
       </div>
     </div>
   );
